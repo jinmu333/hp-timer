@@ -74,7 +74,9 @@ export default {
     computeValue() {
       this.expectValue =
         parseInt(this.startValue) +
-        parseInt((this.expectDatetime - this.startDatetime) / 1000 / 60 / 8);
+        parseInt(
+          ((this.expectDatetime - this.startDatetime) / 1000 + 1) / 60 / 8
+        );
       this.expectValue = this.expectValue > 160 ? 160 : this.expectValue;
       return ElMessageBox.alert(
         dayjs(this.expectDatetime).format("YYYY-MM-DD HH:mm:ss") +
