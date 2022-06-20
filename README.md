@@ -1,5 +1,7 @@
 # timer
 
+![README](README.png)
+
 ## Project setup
 ```
 yarn install
